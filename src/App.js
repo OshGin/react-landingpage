@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import logo from './logo.svg';
+
 import './App.css';
 import { css } from '@emotion/react';
 
@@ -19,15 +19,16 @@ function App() {
     align-items: top;
   `;
 
-  const bluetextBox = css`
+  const textBox = css`
     margin-left: 12rem;
-    text-align: left;
+    text-align: justify;
+    border: bold red;
   `;
-  const blueboxPic = css`
-    width: 395px; /* width of container */
-    height: 600px; /* height of container */
+  const picBox = css`
+    width: 395px;
+    height: 600px;
     object-fit: cover;
-    object-position: 20% 10%; /* try 20px 10px */
+    object-position: 20% 10%;
     padding-left: 12rem;
     margin-bottom: 0;
   `;
@@ -54,8 +55,40 @@ function App() {
     text-size-adjust: 100%;
     padding-left: 12rem;
   `;
+
   const blackBox = css`
     background-color: black;
+    display: flex;
+    flex-direction: row;
+    font-family: inherit;
+    line-height: inherit;
+    height: 600px;
+    width: 75% justify-content;
+    line-height: 24px;
+    padding-top: 0;
+    tab-size: 4;
+    text-size-adjust: 100%;
+    padding-left: 12rem;
+    margin-bottom: 10;
+  `;
+
+  const yellowBox = css`
+    background-color: #ffbc00;
+    display: flex;
+    flex-direction: row;
+    font-family: inherit;
+    line-height: inherit;
+    height: 600px;
+    width: 75% justify-content;
+    line-height: 24px;
+    padding-top: 0;
+    tab-size: 4;
+    text-size-adjust: 100%;
+    padding-left: 12rem;
+    margin-bottom: 10;
+  `;
+  const purpleBox = css`
+    background-color: #6b4af1;
     display: flex;
     flex-direction: row;
     font-family: inherit;
@@ -73,9 +106,9 @@ function App() {
   return (
     <div className="App">
       <section css={blueBox}>
-        <div css={bluetextBox}>
+        <div css={textBox}>
           <a href="https://apps.apple.com/app/triage-2/id1585295768">
-            <img src="https://triage.cc/hero.svg" alt="button"></img>
+            <img src="https://triage.cc/hero.svg" alt="button" />
           </a>
           <h1 css={blueboxHone}>Triage is first aid for your inbox.</h1>
           <h2 css={blueboxHtwo}>
@@ -83,12 +116,12 @@ function App() {
             better. <br /> Download Triage 2 on the App Store today.
           </h2>
           <a href="https://apps.apple.com/app/triage-2/id1585295768">
-            <img src="https://triage.cc/download.svg" alt="Buy"></img>
+            <img src="https://triage.cc/download.svg" alt="Buy" />
           </a>
         </div>
         <div>
           <img
-            css={blueboxPic}
+            css={picBox}
             src="https://triage.cc/screenshots/hero.png"
             alt="Screen"
           />
@@ -97,7 +130,7 @@ function App() {
       <section css={redBox}>
         <div>
           <img
-            css={blueboxPic}
+            css={picBox}
             src="https://triage.cc/screenshots/archive.png"
             alt="Screen"
           />
@@ -112,15 +145,34 @@ function App() {
         <h2 css={blueboxHtwo}>Or create your own custom workflow.</h2>
         <div>
           <img
-            css={blueboxPic}
+            css={picBox}
             src="https://triage.cc/screenshots/keep.png"
             alt="Screen"
           />
         </div>
       </section>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
+      <section css={yellowBox}>
+        <div>
+          <img
+            css={picBox}
+            src="https://triage.cc/screenshots/expand.png            "
+            alt="Screen"
+          />
+        </div>
+        <h1 css={blueboxHone}>Tap to expand</h1>
+        <h2 css={blueboxHtwo}>Open the message to view the whole thread.</h2>
+      </section>
+      <section css={purpleBox}>
+        <h1 css={blueboxHone}>Drag right to keep</h1>
+        <h2 css={blueboxHtwo}>Or create your own custom workflow.</h2>
+        <div>
+          <img
+            css={picBox}
+            src="https://triage.cc/screenshots/reply.png"
+            alt="Screen"
+          />
+        </div>
+      </section>
       <div>6</div>
       <div>7</div>
     </div>
